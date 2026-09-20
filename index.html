@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deckhand — konuyu yaz, asistan slaytları kursun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark"></span>
+            <span class="brand-name">Deckhand</span>
+            <span class="brand-tag">Bir satır konu yaz, küçük asistan slaytları gözünün önünde kursun.</span>
+        </div>
+        <form id="topic-form" class="topic-form" autocomplete="off">
+            <input id="topic-input" type="text" maxlength="80" placeholder="Konu yaz… örn. Kahve mi yoksa çay mı?" value="Kahve mi yoksa çay mı?">
+            <button type="submit" id="btn-build" class="primary">Kur</button>
+        </form>
+        <div class="chips" id="chips">
+            <button type="button" data-topic="Uzay turizmi">Uzay turizmi</button>
+            <button type="button" data-topic="Ekşi mayalı ekmek nasıl yapılır">Ekşi mayalı ekmek nasıl yapılır</button>
+            <button type="button" data-topic="Kediler mi yoksa köpekler mi">Kediler mi yoksa köpekler mi</button>
+            <button type="button" data-topic="Elektrikli araçlar kısaca">Elektrikli araçlar kısaca</button>
+        </div>
+    </header>
+
+    <div class="toolbar" id="toolbar">
+        <div class="group">
+            <button id="btn-new" title="Seçili slaydın altına yeni slayt ekle">+ Yeni slayt</button>
+            <button id="btn-delete" title="Seçili slaydı sil">Sil</button>
+            <button id="btn-up" title="Seçili slaydı yukarı taşı">↑</button>
+            <button id="btn-down" title="Seçili slaydı aşağı taşı">↓</button>
+            <button id="btn-layout" title="Seçili slaydın düzenini değiştir">Düzen: <span id="layout-name">madde</span></button>
+        </div>
+        <div class="group themes" id="theme-group" title="Tema">
+            <button class="swatch" data-theme="gece" title="Gece"></button>
+            <button class="swatch" data-theme="kagit" title="Kağıt"></button>
+            <button class="swatch" data-theme="orman" title="Orman"></button>
+            <button class="swatch" data-theme="ikili" title="İkili"></button>
+            <button class="swatch" data-theme="seker" title="Şeker"></button>
+        </div>
+        <div class="group">
+            <button id="btn-present" title="Tam ekran sun (ok tuşları, Esc)">▶ Sun</button>
+            <button id="btn-download" title="Tek dosya HTML olarak indir">⤓ İndir</button>
+        </div>
+    </div>
+
+    <main class="workspace">
+        <aside class="slides" id="slide-list" aria-label="Slaytlar"></aside>
+
+        <section class="stage-wrap">
+            <div class="stage" id="stage" data-theme="gece"></div>
+            <p class="hint">Metne tıkla ve yaz; asistan senin değiştirdiğin yere dokunmaz.</p>
+        </section>
+
+        <aside class="assistant" id="assistant">
+            <div class="avatar" id="avatar">
+                <div class="eye left"><div class="pupil"></div></div>
+                <div class="eye right"><div class="pupil"></div></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="assistant-controls">
+                <button id="btn-pause" title="Asistanı duraklat / devam ettir">Duraklat</button>
+                <button id="btn-speed" title="Asistanın hızı">Hız: 1x</button>
+            </div>
+            <div class="log" id="log"></div>
+        </aside>
+    </main>
+
+    <div class="present" id="present" hidden>
+        <div class="present-slide" id="present-slide" data-theme="gece"></div>
+        <div class="present-nav">
+            <button id="present-prev">‹</button>
+            <span id="present-count"></span>
+            <button id="present-next">›</button>
+            <button id="present-close">Kapat</button>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+
+    <script src="js/planner.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/deck.js"></script>
+    <script src="js/assistant.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
