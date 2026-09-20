@@ -1,5 +1,7 @@
 # Deckhand
 
+> **Taslak proje.** Sunum yapısı, görünür asistan ve düzenleme akışı çalışıyor; ama slayt *içeriği* şimdilik genel geçer: dil modeli yok, planlayıcı her şablonu küçük bir hazır cümle havuzundan dolduruyor. İskelet bekleyin, içerik değil. Plan: kaynak olarak kendi notlarınızı yapıştırmak ve isterseniz kendi API anahtarınızla gerçek içerik üretmek.
+
 In English: [README.md](README.md)
 
 Tek satır yaz — "kahve mi çay mı", "ekşi mayalı ekmek nasıl yapılır" — sayfadaki küçük asistan slaytları gözünün önünde kursun: senin bastığın araç çubuğu düğmelerine o da basar, senin yazdığın kutulara o da yazar, arada "bunu buraya koyayım" gibi kısa notlar bırakır. İstediğin an araya girersin; asistan senin değişikliklerinin üstüne yazmaz, etrafından dolaşır.

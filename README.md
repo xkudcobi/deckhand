@@ -1,5 +1,7 @@
 # Deckhand
 
+> **Draft project.** The deck structure, the visible assistant and the editing flow work, but the slide *content* is generic: there is no language model, so the planner fills each template from a small pool of stock phrases. Expect scaffolding, not substance. The plan is to let you paste your own notes as the source and, optionally, use your own API key for real content.
+
 Türkçe: [README.tr.md](README.tr.md)
 
 Type one line — "coffee or tea?", "how to bake sourdough" — and a small assistant on the page builds a slide deck in front of you, pressing the same toolbar buttons you can press, typing into the same fields you can type into, and leaving short notes like "let me put this here". You can jump in at any moment; it works around your changes instead of over them.
